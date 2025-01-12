@@ -1,20 +1,30 @@
 body {
     font-family: 'Kalam', cursive, sans-serif;
     background-color: #fff5e6;
-}
-.abt{
-    text:justify;
-}
-.navbar {
-    background-color: #ff9800;
-}
-.navbar a {
-    color: #fff;
-}
-.content {
-text-align: justify;
+    margin: 0;
+    padding: 0;
 }
 
+.abt {
+    text-align: justify;
+}
+
+.navbar {
+    background-color: #ff9800;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f7f7f7;
+}
 
 .hero-section {
     background-image: url('../img/img8.jpg'); /* Replace with your image */
@@ -22,12 +32,13 @@ text-align: justify;
     background-position: center;
     height: 80vh;
     color: #fff;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
 }
+
 .hero-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -39,40 +50,125 @@ text-align: justify;
 
 .hero-content {
     position: relative;
-    z-index: 1; /* Ensures the text is above the overlay */
-    text-align: center;
+    z-index: 1;
     padding: 20px;
-    color: white; /* White text color */
+    color: white;
 }
+
 .section-title {
     color: #d17d0f;
     margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
 }
+
+.content {
+    text-align: justify;
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 .footer {
     background-color: #212529;
     color: #fff;
     padding: 20px 0;
-}
-.footer a {
-    color: #ff9800;
+    text-align: center;
 }
 
+.footer a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #f7f7f7;
+}
 
 #gallery .row .col-md-4 img {
     width: 100%;
-    height: 250px;  /* Adjust height as needed */
-    object-fit: cover;  /* Ensures the image fills the area without stretching */
+    height: 250px;
+    object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery .row .col-md-4 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* General responsiveness */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 0.9rem;
     }
-    
-    /* Add animation effect on hover */
-    #gallery .row .col-md-4 img:hover {
-    transform: scale(1.05);  /* Zoom effect on hover */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);  /* Add shadow for effect */
+
+    .hero-section {
+        height: 60vh;
     }
-    
-    /* Fix the error in HTML, remove 'assets\img\2022-02-26.jpg' div */
-    .row .col-md-4 img {
+
+    .hero-content {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        font-size: 0.9rem;
+    }
+
+    #gallery .row .col-md-4 img {
+        height: 200px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar a {
+        margin: 0 5px;
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    #gallery .row .col-md-4 img {
+        height: 150px;
+    }
+
+    .footer {
+        padding: 15px 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Additional global styles */
+h1, h2, h5 {
+    font-family: 'Times New Roman', serif;
+}
+
+img {
     max-width: 100%;
-    }
-    
+    height: auto;
+}
+
+button, a {
+    cursor: pointer;
+}
