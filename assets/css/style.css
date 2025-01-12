@@ -4,14 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-marquee {
-    font-size: 18px;
-    color: #ffffff;
-    background-color: #ff9800;
-    font-weight: 400;
-    font-style: oblique;
-    font-size: larger;
-}
+
 .abt {
     text-align: justify;
 }
@@ -75,7 +68,14 @@ marquee {
     font-size: 1rem;
     line-height: 1.6;
 }
-
+marquee {
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #ff9800;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: larger;
+}
 .footer {
     background-color: #212529;
     color: #fff;
